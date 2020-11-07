@@ -1,15 +1,15 @@
 {"list": [
 {"title": "Lista sobre Condicionais", 
 "exercices": [ 
-	{"title" :"Múltiplos de 7" , "folder": "1"},
-	{"title": "Maior de todos" , "folder": "2"}
+	{"title" :"Pode ter CHN?" , "folder": "1"},
+	{"title": "Está com febre?" , "folder": "2"}
 	]
 } , 
 {"title": "Lista sobre Loops", 
 "exercices": [
 	{"title": "Múltiplos de 7" , "folder": "1"},
 	{"title": "Maior de todos" , "folder": "2"},
-	{"title": "Maior de todos" , "folder": "2"}
+	{"title": "Primos de 1 a n" , "folder": "2"}
 	]
 }
 
