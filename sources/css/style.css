@@ -1,0 +1,186 @@
+html, body{
+	width:100%;
+	height:100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.bar-side{
+	height: 100%;
+	width: 20%;
+	min-width: 15%;
+	float:left;
+	background-color: #eee;
+}
+
+.separator{
+	width: 10px;
+	height: 100%;
+	background-color: #bdbdbd;
+	float:left;
+}
+
+.container{
+	
+	height: calc(100% - 100px);
+	
+}
+.container-main{
+	
+	height: 100%;
+	width: calc( 40% - 10px);
+	float:left;	
+}
+
+.container-code{
+	background-color: #060f24;
+}
+
+.head-menu{
+	background-color: #e6e6e6;
+	border-bottom: solid 1px #bdbdbd;
+	width: 100%;
+	height: 70px;
+	padding-top: 0px;
+}
+
+.file-explore-bar{
+	width: calc(100% - 10px);
+	height: 40px;
+	margin-left: 5px;
+	margin-top: 5px;
+	background-color: #33334d;
+	color: #fefefe;
+	text-align: left;	
+	text-indent: 5px;
+	font-size: 20px;
+	position:relative;
+	
+	
+}
+.file-explore-bar .icofont-file-python{
+	font-size: 30px;
+	position:relative;
+	top: 5px;
+}
+
+.file-explore-bar:hover{
+	cursor: pointer;
+	background-color: #223366;
+}
+
+#console-container{
+	color: #fff;
+	font-family: Courier New;
+}
+#console-container .alert{
+	color: #777;
+}
+
+.contents{
+	margin: 10px;
+}
+
+.button-head-menu{
+	font-size: 12px;
+	width: 60px;
+	height: calc( 100%  - 15px);
+	text-align: center;
+	padding: 5px;
+	margin-left: 10px;
+	float: left;
+	color: #727282;
+}
+
+
+@keyframes slidebg {
+  from {background-size: 100% 0%;}
+  to {background-size: 100% 100%;}
+}
+
+
+#button-run{
+	background-image: url('../images/bg-green.png');
+	background-repeat: no-repeat;
+	background-size: 100% 0%;
+	background-position: 0px 100%;
+	border-bottom: solid 5px #2a9c2a;
+	color:#468746;
+	animation-timing-function: ease-out
+}
+
+#button-run i{
+	padding: 2px;
+	font-size: 30px;
+}
+
+#button-run:hover{
+	/*background: #468746;*/
+	background-size: 100% 100%;
+	color: #dedede;
+	animation-name: slidebg;
+	animation-duration: 0.2s;
+}
+
+
+.button-head-menu:hover{
+	color: #232b3d;
+	cursor:pointer;
+}
+
+.button-head-menu .label{
+	margin-top: 5px;
+	display: block;
+}
+
+.button-head-menu i{
+	
+	font-size: 35px;
+	display: block;
+}
+
+#button-help{
+	margin-left: 10px;
+}
+
+
+#button-help .link{
+	font-style: italic;
+	color: #d1d435;
+}
+
+#button-help .link:hover{
+	cursor: pointer;
+}
+
+
+#editor {
+    width: 100%;
+    height: 100%
+}
+
+#editor-bar{
+	width: 100%;
+	height: 30px;
+}
+
+#editor-bar .item-code{
+	width: 80px;
+	height: 25px;
+	background-color: fff;
+	text-align: center;
+	padding-top: 5px;
+	float: left;
+}
+
+#editor-bar .item-code:hover{
+	cursor: pointer;
+}
+
+#editor-bar .item-code.active{
+	background-color: ddd;
+}
+
+#editor-bar .item-code.no-saved:after{
+	content: "*";
+}

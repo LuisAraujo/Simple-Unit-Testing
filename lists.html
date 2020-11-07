@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Navbar Template · Bootstrap</title>
+<link href="sources/fontawesome/css/all.css" rel="stylesheet">
+  
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbars/">
+	<script src="js/jquery-3.4.1.min.js"> </script>
+    <!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+	
+	   .list-group{
+			margin-bottom: 10px
+	   }
+	   
+	   .list-group-btn:hover{
+			cursor: pointer;
+			background-color:#eee;
+	   }
+	   
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="navbar.css" rel="stylesheet">
+  </head>
+  <body>
+   
+   
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">UTO</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+     
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item  active">
+        <a class="nav-link" href="lists.html">Lista</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+
+<div class="container">
+ 
+
+
+
+  <main id="list-exercices" role="main">
+  </main>
+  
+  
+</div>
+
+<script>
+
+
+$.ajax({
+	  dataType: "json",
+	  url: "problems/list.json",
+	  success: function(json){
+	  console.log(json);
+		$("#title").html(json.title);
+		$("#desc").html(json.desc);
+
+		
+		var list = "";
+		for(let i =0; i < json.list.length; i++){
+			list += '<ul class="list-group">';
+			list += '<li class="list-group-item active list-group-item-secondary"> <i class="fas fa-clipboard-list"></i> '+json.list[i].title+'</li>';
+			
+			for(let l =0; l < json.list[i].exercices.length; l++){
+				console.log(json.list[0]);
+				list += '<li class="list-group-item list-group-btn" value="'+json.list[i].exercices[l].folder+'"> <i class="fas fa-laptop"></i>  '+json.list[i].exercices[l].title+'</li>';
+			}
+			list += '</ul>';
+			
+		}
+		
+		$("#list-exercices").html(list);
+		
+		
+		$(".list-group-item").click( function(){
+
+			 window.location.href = "items.html?cod="+$(this).val();
+		});
+
+
+	  },
+	  error:  function(json){
+		console.log(json);
+	  },
+	});
+
+</script>
+
+

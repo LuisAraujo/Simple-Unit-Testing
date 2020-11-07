@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>UTO - Unit Testing Online</title>
+	
+	
+	<link href="sourcses/css/style.css" rel="stylesheet">
+	<link href="sources/fontawesome/css/all.css" rel="stylesheet">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbars/">
+	<script src="js/jquery-3.4.1.min.js"> </script>
+    <!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="navbar.css" rel="stylesheet">
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">UTO</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Atividade <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="lists.html">Lista</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+
+
+<div class="container">
+ 
+
+<div id = "container-status"></div>
+
+  <main role="main">
+    <div class="jumbotron">
+      <div class="col-sm-8 mx-auto">
+        <h1 id="title"></h1>
+        <p id="desc">
+        <p>
+		
+				<form id="sendcode" method="post" enctype="multipart/form-data>
+					<div class="form-group">
+					<label for="exampleFormControlFile1">Envio o seu arquivo do código</label>
+					<input name="codefile" type="file" class="form-control-file mb-2" id="codefile" required>
+					<input name="idactivity" type="hidden" id="idactivity">
+					 <button type="submit" class="btn btn-primary mb-2"> <i class='fas fa-code'></i> Enviar</button>
+				</form>
+        </p>
+      </div>
+    </div>
+  </main>
+  
+  <div id="msg-return-code" class="alert" role="alert"></div>
+</div>
+
+
+
+
+<script>
+
+let searchParams = new URLSearchParams(window.location.search);
+let param = searchParams.get('cod');
+
+$("#idactivity").val( param );
+
+if(param != undefined){
+  
+	$.ajax({
+	  dataType: "json",
+	  url: "problems/"+param+ "/desc.json",
+	  success: function(json){
+		$("#title").html(json.title);
+		$("#desc").html(json.desc);
+		
+		let table = "<br>Exemplo</b> <br><table class='table table-bordered'>  <thead class='thead-dark'><tr ><th scope='col'>Entrada</th> <th scope='col'> Saída</th></tr> </thead> ";
+		
+		for(let i =0; i < json.io.length; i++){
+			
+				table +="<tr scope='row'><th>"+json.io[i].input+"</th><th>"+json.io[i].output+"</th></tr>"
+		}
+		
+		table += "</table>";
+		
+		$("#desc").append(table);
+		$("#filecode").show();
+	  },
+	  error:  function(json){
+		$("#title").html("Sem exercício");
+		$("#desc").html("Não há exercicio para este código!");
+		$("#sendcode").hide();
+	  },
+	});
+}
+
+$("#sendcode").submit( function(e) {
+
+	e.preventDefault();
+
+	var formData = new FormData(this);
+ 
+  $.ajax({
+        url: "backend/execulting-code.php",
+        type: 'POST',
+        data: formData,
+        success: function(data) {
+		console.log(data);
+		data = JSON.parse(data);
+		
+            if(data.status == "accepted"){
+				$("#msg-return-code").removeClass("alert-danger");
+				$("#msg-return-code").removeClass("alert-warning");
+				$("#msg-return-code").addClass("alert-success");
+				
+				$("#msg-return-code").html("<i class='fas fa-grin-hearts'></i><b> Seu código foi aceito!!!</b> Parabéns.");
+				
+				
+				
+			}else if(data.status == "fail"){
+				$("#msg-return-code").removeClass("alert-danger");
+				$("#msg-return-code").addClass("alert-warning");
+				$("#msg-return-code").removeClass("alert-success")
+				
+				$("#msg-return-code").html("<i class='fas fa-bug'></i> <b>Seu código Falhou</b>. Veja detalhes: " );
+				
+				for(let i =0; i < data.erro.length; i++){
+					console.log(data.erro[i]);
+					$("#msg-return-code").append("<br><i class='fas fa-angle-double-right'></i>  Para a(s) seguinte(s) entrada(s): "+data.erro[i].inputs+ ", o seu código gerou a seguinte saída " + data.erro[i].actual +". No entanto, era esperado " + data.erro[i].expected );
+				};
+				
+				
+				
+			}else{
+				$("#msg-return-code").addClass("alert-danger");
+				$("#msg-return-code").removeClass("alert-warning");
+				$("#msg-return-code").removeClass("alert-success")
+				$("#msg-return-code").html("<i class='fas fa-ambulance'></i> <b>Seu código possui um erro sintático</b>. Corrija-o  antes de enviar para o teste!");
+			}
+			
+			$("#sendcode").trigger("reset");
+        },
+        cache: false,
+        contentType: false,
+        processData: false,
+        xhr: function() { // Custom XMLHttpRequest
+            var myXhr = $.ajaxSettings.xhr();
+            if (myXhr.upload) { // Avalia se tem suporte a propriedade upload
+                myXhr.upload.addEventListener('progress', function() {
+                    /* faz alguma coisa durante o progresso do upload */
+                }, false);
+            }
+            return myXhr;
+        }
+    });
+	
+});
+
+</script>
+
+
+</html>
