@@ -20,7 +20,9 @@ Modifique o arquivo json na pasta *problems*
 **Padrão Json**
 > list.json: Fornece uma lista de problemas como nome e id (id é referente ao nome da pasta que terá o desc.json da questão.
 
-``` {"list": [
+```javascript
+
+ {"list": [
 {"title": "LISTA 1", 
 "exercices": [ 
 	{"title" :"NOME DO PROBLEMA", "folder": "PASTA"},
@@ -37,9 +39,19 @@ Modifique o arquivo json na pasta *problems*
 ``` 
 
 
-> desc.json
+> desc.json: Forne o nome, a descrição e exemplos de entrada e saída que são exibidos aos usuários. Além disso, fornece um conjunto de testes unitários que será executado para verificar a corretude do código.
 
-``` {"title": "NOME DO PROBLEMA" , "desc": "DESCRIÇÃO DO PROBLMEA",  "io": [{"input": "EXEMPLOS DE ENTRADA", "output": "EXEMPLOS DE SAIDA"},{"input": "EXEMPLOS DE ENTRADA", "output": "EXEMPLOS DE SAIDA"}], "cases":[{"input": "ENTRADAS", "output": "SAIDAS"}, {"input": "ENTRADA", "output": "SAIDA"}]} 
+```javascript
+
+ {"title": "NOME DO PROBLEMA" , "desc": "DESCRIÇÃO DO PROBLMEA",  "io": [
+	{"input": "EXEMPLOS DE ENTRADA", "output": "EXEMPLOS DE SAIDA"},
+	{"input": "EXEMPLOS DE ENTRADA", "output": "EXEMPLOS DE SAIDA"}
+	], 
+
+"cases":[
+	{"input": "ENTRADAS", "output": "SAIDAS"}, {"input": "ENTRADA", "output": "SAIDA"}
+	]
+} 
 ``` 
 
 ### TELAS:
