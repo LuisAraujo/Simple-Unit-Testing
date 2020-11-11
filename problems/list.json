@@ -7,9 +7,9 @@
 } , 
 {"title": "Lista sobre Loops", 
 "exercices": [
-	{"title": "Múltiplos de 7" , "folder": "1"},
-	{"title": "Maior de todos" , "folder": "2"},
-	{"title": "Primos de 1 a n" , "folder": "2"}
+	{"title": "Múltiplos de 7" , "folder": "3"},
+	{"title": "Maior de todos" , "folder": "4"},
+	{"title": "Primos de 1 a n" , "folder": "5"}
 	]
 }
 

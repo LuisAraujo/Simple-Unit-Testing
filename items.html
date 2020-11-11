@@ -9,7 +9,7 @@
     <title>UTO - Unit Testing Online</title>
 	
 	
-	<link href="sourcses/css/style.css" rel="stylesheet">
+	<link href="sources/css/style.css" rel="stylesheet">
 	<link href="sources/fontawesome/css/all.css" rel="stylesheet">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbars/">
 	<script src="js/jquery-3.4.1.min.js"> </script>
@@ -87,9 +87,7 @@
   <div id="msg-return-code" class="alert" role="alert"></div>
 </div>
 
-
-
-
+<script src="localstorage/localstorage.js"></script>	
 <script>
 
 let searchParams = new URLSearchParams(window.location.search);
@@ -149,7 +147,7 @@ $("#sendcode").submit( function(e) {
 				
 				$("#msg-return-code").html("<i class='fas fa-grin-hearts'></i><b> Seu código foi aceito!!!</b> Parabéns.");
 				
-				
+				setNewItem( $("#idactivity").val(), "accept");
 				
 			}else if(data.status == "fail"){
 				$("#msg-return-code").removeClass("alert-danger");
@@ -163,13 +161,15 @@ $("#sendcode").submit( function(e) {
 					$("#msg-return-code").append("<br><i class='fas fa-angle-double-right'></i>  Para a(s) seguinte(s) entrada(s): "+data.erro[i].inputs+ ", o seu código gerou a seguinte saída " + data.erro[i].actual +". No entanto, era esperado " + data.erro[i].expected );
 				};
 				
-				
+				setNewItem( $("#idactivity").val(), "fail");
 				
 			}else{
 				$("#msg-return-code").addClass("alert-danger");
 				$("#msg-return-code").removeClass("alert-warning");
 				$("#msg-return-code").removeClass("alert-success")
 				$("#msg-return-code").html("<i class='fas fa-ambulance'></i> <b>Seu código possui um erro sintático</b>. Corrija-o  antes de enviar para o teste!");
+				
+				setNewItem( $("#idactivity").val(), "error");
 			}
 			
 			$("#sendcode").trigger("reset");

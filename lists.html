@@ -68,7 +68,7 @@
 
 <div class="container">
  
-
+  <div> Olá <span id="username"></span>, </div>
 
 
   <main id="list-exercices" role="main">
@@ -76,9 +76,12 @@
   
   
 </div>
+<script src="localstorage/localstorage.js"></script>
+
 
 <script>
 
+$("#username").html( getUser() );
 
 $.ajax({
 	  dataType: "json",
@@ -96,7 +99,19 @@ $.ajax({
 			
 			for(let l =0; l < json.list[i].exercices.length; l++){
 				console.log(json.list[0]);
-				list += '<li class="list-group-item list-group-btn" value="'+json.list[i].exercices[l].folder+'"> <i class="fas fa-laptop"></i>  '+json.list[i].exercices[l].title+'</li>';
+				list += '<li class="list-group-item list-group-btn" value="'+json.list[i].exercices[l].folder+'"> <i class="fas fa-laptop"></i>  '+json.list[i].exercices[l].title;
+				
+				var item = getItem(json.list[i].exercices[l].folder);
+				
+				if(item == "accept")
+					list +=' <span class="badge badge-success">Accepted</span>';
+				else if(item == "fail")
+					list +=' <span class="badge badge-warning">Failed</span>';
+				else if(item == "error")
+					list +=' <span class="badge badge-danger">Error</span>';
+				else
+					list +=' <span class="badge badge-secondary">Pending</span>';
+				list +='</li>';
 			}
 			list += '</ul>';
 			

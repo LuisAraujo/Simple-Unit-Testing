@@ -1,0 +1,7 @@
+{
+	"permission": "open", 
+	"log": "on",
+	"register-sucess": "on",
+	"register-fail": "on",
+	"problems": "json"
+} 

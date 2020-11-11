@@ -6,9 +6,9 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
-    <title>Navbar Template · Bootstrap</title>
+      <title>UTO - Unit Testing Online</title>
 <link href="sources/fontawesome/css/all.css" rel="stylesheet">
-  
+  <script src="js/jquery-3.4.1.min.js"> </script>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbars/">
 
     <!-- Bootstrap core CSS -->
@@ -29,6 +29,11 @@
           font-size: 3.5rem;
         }
       }
+	  
+	  #hits-uto{
+		display:none;
+	  }
+	  
     </style>
     <!-- Custom styles for this template -->
     <link href="navbar.css" rel="stylesheet">
@@ -52,23 +57,83 @@
     <div class="jumbotron">
       <div class="col-sm-8 mx-auto">
         <h1>UTO - Unit Testing Online</h1>
-        <p>Olá, bem-vindx ao UTO. Este é um sistema de correção automática que utiliza testes unitários. 
-		
-		<p><strong> <i class='fas fa-search'></i> O que vamos fazer?</strong> Iremos executar o seu código, fornecendo entradas e comparando com saídas esperadas.</p>
-		
-		<p><strong> <i class='fas fa-tasks'></i> Como pode utiliza o UTO?</strong> Acesse as listas de exercícios, crie o seu código e submeta ao UTO.</p>
-		
-		 <div class="alert alert-danger" role="alert"> <i class='fas fa-exclamation'></i> Esta versão do UTO não salva progresso!</div>
+        
+		<p>
+		<b>Olá, bem-vindx ao UTO. Este é um sistema de correção de questões automática para algoritmo. UTO utiliza testes unitários e permite que você teste seus exercícios de maneira fácil e rápida.</b>
+		</p>
+
+		<p>Sua primeira vez aqui? <a href="#" id="show-hits-uto"> Clique aqui </a>!<p>
+					
+
+			
+		<div id="hits-uto">
+			<p><strong> <i class='fas fa-search'></i> O que vamos fazer?</strong> Iremos executar o seu código, fornecer dados de entrada e comparar os dados de saída com saídas esperadas. 
+			
+			
+			<p><strong> <i class='fas fa-tasks'></i> Como pode utiliza o UTO?</strong> Acesse as listas de exercícios, crie o seu código e submeta ao UTO.</p>
+			 
+			<p>O seu código pode resultar em <span class='badge badge-success'>Accepted</span>, quando ele está 100% correto.</p>
+
+			<p>Ou <span class='badge badge-warning'>Failed</span>, quando ele não possui erro sintático, mas não está em conformidade com o que foi solicitado na atividade. <i>Neste caso, ajuste a lógica do seu código, aproveitando os dados dos testes. </p>
+			<p>
+			Por fim, o seu código pode ter erro sintático <span class='badge badge-danger'>Error</span>. Neste caso, use o seu compilador para verificar o erro.
+			</p>
+			
+		</div>
+		 <div class="alert alert-danger" role="alert"> <i class='fas fa-exclamation'></i> Esta versão do UTO salva progresso localmente (navegador).</div>
 		 
 		<p>Dejesa <a href=""> saber mais </a> sobre  <strong>Testes Unitários</strong>? </p>
 		
-        <p>
-          <a class="btn btn-primary" href="lists.html" role="button"><i class='fas fa-clipboard-list'></i> Listas de Exercicios</a>
-        </p>
+        
+		<form id="form-login"> 
+			<div class="input-group mb-3">
+			<div class="input-group-prepend">
+			<span class="input-group-text" id="basic-addon1">@</span>
+			</div>
+			<input  id="inputname" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required>
+			</div>
+			<button class="btn btn-primary" href="lists.html" role="button"><i class='fas fa-clipboard-list'></i> Listas de Exercicios</button>
+		  </form>
+         
       </div>
     </div>
   </main>
 </div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="js/bootstrap.bundle.min.js"></script>
+
+<script src="localstorage/localstorage.js"></script>
+
+
+<script>
+
+if ( (getUser() != undefined) || (getUser() != "")){
+	$("#inputname").val( getUser()) ;
+}
+
+$("#show-hits-uto").click(function(){
+	$("#hits-uto").show();
+});
+
+
+$("#form-login").submit( function(e) {
+
+	e.preventDefault();
+	
+	if(getUser() != $("#inputname").val() ){
+		var resp = confirm("você irá perder o seu progresso");
+		
+		if(resp){
+			clearAllItems();
+			setUser( $("#inputname").val() );
+			window.location = "lists.html";
+		}
+	}else{
+		window.location = "lists.html";
+	}
+	
+	
+	
+});
+	
+</script>
+<script src="js/bootstrap.bundle.min.js"></script>
 </html>
