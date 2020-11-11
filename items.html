@@ -76,6 +76,7 @@
 					<label for="exampleFormControlFile1">Envio o seu arquivo do código</label>
 					<input name="codefile" type="file" class="form-control-file mb-2" id="codefile" required>
 					<input name="idactivity" type="hidden" id="idactivity">
+					<input name="idtoken" type="hidden" id="idtoken">
 					 <button type="submit" class="btn btn-primary mb-2"> <i class='fas fa-code'></i> Enviar</button>
 				</form>
         </p>
@@ -128,7 +129,9 @@ if(param != undefined){
 $("#sendcode").submit( function(e) {
 
 	e.preventDefault();
-
+	
+	$("#idtoken").val(getToken());
+	
 	var formData = new FormData(this);
  
   $.ajax({
@@ -186,6 +189,11 @@ $("#sendcode").submit( function(e) {
     });
 	
 });
+
+
+var getToken = function(){
+    return    String.fromCharCode(Math.floor( Math.random() * 25  + 65  )) +""+  String.fromCharCode(Math.floor(Math.random() * 25 + 65 )) +""+  Math.floor(Math.random() * 25  + 65 ) +""+  Math.floor(Math.random() * 25  + 65 ) +""+  String.fromCharCode(Math.floor(Math.random() * 25  + 97 ));
+}
 
 </script>
 
