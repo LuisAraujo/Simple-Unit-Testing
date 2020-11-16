@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+      <title>UTO - Unit Testing Online</title>
+<link href="sources/fontawesome/css/all.css" rel="stylesheet">
+  <script src="js/jquery-3.4.1.min.js"> </script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbars/">
+
+    <!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+	  
+	  #hits-uto{
+		display:none;
+	  }
+	  
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="navbar.css" rel="stylesheet">
+  </head>
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html">UTO</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Importar <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">Sobre</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="help.html">Ajuda</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+
+
+<div class="container">
+ 
+
+
+
+  <main role="main">
+   
+  </main>
+  
+  <div style="display:none">
+  
+  
+   <div class="jumbotron">
+      <div class="col-sm-8 mx-auto">
+        <h1>UTO - Unit Testing Online</h1>
+        
+		<p>
+		<b>Olá, bem-vindx ao UTO. Este é um sistema de correção de questões automática para algoritmo. UTO utiliza testes unitários e permite que você teste seus exercícios de maneira fácil e rápida.</b>
+		</p>
+
+		<p>Sua primeira vez aqui? <a href="#" id="show-hits-uto"> Clique aqui </a>!<p>
+					
+
+			
+		<div id="hits-uto">
+			<p><strong> <i class='fas fa-search'></i> O que vamos fazer?</strong> Iremos executar o seu código, fornecer dados de entrada e comparar os dados de saída com saídas esperadas. 
+			
+			
+			<p><strong> <i class='fas fa-tasks'></i> Como pode utiliza o UTO?</strong> Acesse as listas de exercícios, crie o seu código e submeta ao UTO.</p>
+			 
+			<p>O seu código pode resultar em <span class='badge badge-success'>Accepted</span>, quando ele está 100% correto.</p>
+
+			<p>Ou <span class='badge badge-warning'>Failed</span>, quando ele não possui erro sintático, mas não está em conformidade com o que foi solicitado na atividade. <i>Neste caso, ajuste a lógica do seu código, aproveitando os dados dos testes. </p>
+			<p>
+			Por fim, o seu código pode ter erro sintático <span class='badge badge-danger'>Error</span>. Neste caso, use o seu compilador para verificar o erro.
+			</p>
+			
+		</div>
+		 <div class="alert alert-danger" role="alert"> <i class='fas fa-exclamation'></i> Esta versão do UTO salva progresso localmente (navegador).</div>
+		 
+		<p>Dejesa <a href=""> saber mais </a> sobre  <strong>Testes Unitários</strong>? </p>
+		
+        
+		<form id="form-login"> 
+			<div class="input-group mb-3">
+			<div class="input-group-prepend">
+			<span class="input-group-text" id="basic-addon1">@</span>
+			</div>
+			<input  id="inputname" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required>
+			</div>
+			<button class="btn btn-primary" href="lists.html" role="button"><i class='fas fa-clipboard-list'></i> Listas de Exercicios</button>
+		  </form>
+         
+      </div>
+    </div>
+	
+  
+  </div>
+</div>
+
+<script src="localstorage/localstorage.js"></script>
+
+
+<script>
+
+if ( (getUser() != undefined) || (getUser() != "")){
+	$("#inputname").val( getUser()) ;
+}
+
+$("#show-hits-uto").click(function(){
+	$("#hits-uto").show();
+});
+
+
+$("#form-login").submit( function(e) {
+
+	e.preventDefault();
+	
+	if(getUser() != $("#inputname").val() ){
+		var resp = confirm("você irá perder o seu progresso");
+		
+		if(resp){
+			clearAllItems();
+			setUser( $("#inputname").val() );
+			window.location = "lists.html";
+		}
+	}else{
+		window.location = "lists.html";
+	}
+	
+	
+	
+});
+	
+</script>
+<script src="js/bootstrap.bundle.min.js"></script>
+</html>

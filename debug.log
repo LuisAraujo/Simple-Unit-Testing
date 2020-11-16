@@ -1,0 +1,233 @@
+- 03:14:53.266 INFO: --------------------------------------------------------
+- 03:14:53.266 INFO: Started application
+- 03:14:53.281 INFO: Logging to: C:\Users\hiper\Downloads\phpdesktop-chrome-57.0-rc-php-7.1.3\phpdesktop-chrome-57.0-rc-php-7.1.3\debug.log
+- 03:14:53.281 INFO: Log level = DEBUG4
+- 03:14:53.281 INFO: Starting Mongoose 3.9c web server
+- 03:14:53.281 INFO: WWW directory: C:\Users\hiper\Downloads\phpdesktop-chrome-57.0-rc-php-7.1.3\phpdesktop-chrome-57.0-rc-php-7.1.3\www
+- 03:14:53.281 INFO: Index files: index.html,index.php
+- 03:14:53.281 INFO: CGI interpreter: C:\Users\hiper\Downloads\phpdesktop-chrome-57.0-rc-php-7.1.3\phpdesktop-chrome-57.0-rc-php-7.1.3\php\php-cgi.exe
+- 03:14:53.281 INFO: CGI pattern: **.php$
+- 03:14:53.281 INFO: Hide files patterns: 
+- 03:14:53.281 INFO: CGI environment variables set: TMP=C:\Users\hiper\AppData\Local\Temp\,TEMP=C:\Users\hiper\AppData\Local\Temp\,TMPDIR=C:\Users\hiper\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 03:14:53.297 INFO: Web server url: http://127.0.0.1:49369/
+- 03:14:53.313 INFO: remote_debugging_port = 53655
+- 03:14:53.313 DEBUG: Command line string for the browser process: "C:\Users\hiper\Downloads\phpdesktop-chrome-57.0-rc-php-7.1.3\phpdesktop-chrome-57.0-rc-php-7.1.3\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\hiper\Downloads\phpdesktop-chrome-57.0-rc-php-7.1.3\phpdesktop-chrome-57.0-rc-php-7.1.3\debug.log" --remote-debugging-port=53655
+- 03:14:54.516 DEBUG: App::OnContextInitialized()
+- 03:14:54.516 DEBUG: Window max width/height = 1286/680
+- 03:14:54.531 DEBUG: GetBrowserWindow(): not found, hwnd = 526710
+- 03:14:54.531 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 03:14:54.531 DEBUG: BrowserWindow::CreateBrowserControl()
+- 03:14:54.531 DEBUG: StoreBrowserWindow(): hwnd = 526710
+- 03:14:54.016 DEBUG: Command line string for the gpu-process process: "C:\Users\hiper\Downloads\phpdesktop-chrome-57.0-rc-php-7.1.3\phpdesktop-chrome-57.0-rc-php-7.1.3\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\hiper\Downloads\phpdesktop-chrome-57.0-rc-php-7.1.3\phpdesktop-chrome-57.0-rc-php-7.1.3\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x1616 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=20.19.15.4835 --gpu-driver-date=10-16-2017 --lang=en-US --log-file="C:\Users\hiper\Downloads\phpdesktop-chrome-57.0-rc-php-7.1.3\phpdesktop-chrome-57.0-rc-php-7.1.3\debug.log" --service-request-channel-token=B8A9BD794669F733B797F401837C48F2 --mojo-platform-channel-handle=1816 /prefetch:2
+- 03:14:54.672 DEBUG: ClientHandler::OnAfterCreated()
+- 03:14:54.672 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 03:14:54.719 DEBUG: OnLoadingStateChange: loading=1, url=
+- 03:14:54.000 DEBUG: Command line string for the renderer process: "C:\Users\hiper\Downloads\phpdesktop-chrome-57.0-rc-php-7.1.3\phpdesktop-chrome-57.0-rc-php-7.1.3\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=49CDA64BA3872AF06CB26DAC3D603A44 --lang=en-US --lang=en-US --log-file="C:\Users\hiper\Downloads\phpdesktop-chrome-57.0-rc-php-7.1.3\phpdesktop-chrome-57.0-rc-php-7.1.3\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=49CDA64BA3872AF06CB26DAC3D603A44 --renderer-client-id=3 --mojo-platform-channel-handle=2396 /prefetch:1
+- 03:14:54.078 DEBUG: OnBrowserCreated()
+[1113/031454.551:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 03:14:57.328 INFO: GET 200 /style.css
+- 03:14:57.328 INFO: GET 200 /
+- 03:14:57.547 DEBUG: OnContextCreated()
+- 03:14:57.625 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:49369/
+- 03:15:08.844 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:49369/
+- 03:15:08.125 DEBUG: OnContextCreated()
+- 03:15:08.938 INFO: GET 200 /upload.php
+- 03:15:08.985 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:49369/upload.php
+- 03:15:30.875 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:49369/upload.php
+- 03:15:30.172 DEBUG: OnContextCreated()
+- 03:15:30.985 INFO: POST 200 /upload.php
+- 03:15:30.000 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:49369/upload.php
+- 03:15:39.250 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:49369/upload.php
+- 03:15:40.563 DEBUG: OnContextCreated()
+- 03:15:40.375 INFO: GET 200 /index.php
+- 03:15:40.391 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:49369/index.php
+- 03:15:50.406 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:49369/index.php
+- 03:15:50.609 DEBUG: OnContextCreated()
+- 03:15:50.422 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:49369/style.css
+- 03:15:53.344 DEBUG: WM_DESTROY
+- 03:15:53.344 DEBUG: RemoveBrowserWindow(): hwnd = 526710
+- 03:15:53.344 INFO: Stopping Mongoose web server
+- 03:15:53.344 DEBUG: Mongoose webserver stopped immediately
+- 03:15:53.360 DEBUG: OnBeforeClose() hwnd=985520
+- 03:15:53.360 DEBUG: RemoveBrowserWindow(): hwnd = 985520
+- 03:15:53.360 DEBUG: GetBrowserWindow(): not found, hwnd = 985520
+- 03:15:53.360 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 03:15:53.360 DEBUG: Calling CefQuitMessageLoop()
+- 03:15:53.625 INFO: Ended application
+- 03:15:53.625 INFO: --------------------------------------------------------
+- 20:10:24.563 INFO: --------------------------------------------------------
+- 20:10:24.563 INFO: Started application
+- 20:10:24.563 INFO: Logging to: C:\Users\hiper\Documents\GitHub\Unit-Testing-Online\debug.log
+- 20:10:24.563 INFO: Log level = DEBUG4
+- 20:10:24.563 INFO: Starting Mongoose 3.9c web server
+- 20:10:24.563 INFO: WWW directory: C:\Users\hiper\Documents\GitHub\Unit-Testing-Online\www
+- 20:10:24.563 INFO: Index files: index.html,index.php
+- 20:10:24.578 INFO: CGI interpreter: C:\Users\hiper\Documents\GitHub\Unit-Testing-Online\php\php-cgi.exe
+- 20:10:24.578 INFO: CGI pattern: **.php$
+- 20:10:24.578 INFO: Hide files patterns: 
+- 20:10:24.578 INFO: CGI environment variables set: TMP=C:\Users\hiper\AppData\Local\Temp\,TEMP=C:\Users\hiper\AppData\Local\Temp\,TMPDIR=C:\Users\hiper\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 20:10:24.750 INFO: Web server url: http://127.0.0.1:51022/
+- 20:10:24.781 INFO: remote_debugging_port = 49278
+- 20:10:25.063 DEBUG: Command line string for the browser process: "C:\Users\hiper\Documents\GitHub\Unit-Testing-Online\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\hiper\Documents\GitHub\Unit-Testing-Online\debug.log" --remote-debugging-port=49278
+- 20:10:26.016 DEBUG: Command line string for the gpu-process process: "C:\Users\hiper\Documents\GitHub\Unit-Testing-Online\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\hiper\Documents\GitHub\Unit-Testing-Online\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x1616 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=20.19.15.4835 --gpu-driver-date=10-16-2017 --lang=en-US --log-file="C:\Users\hiper\Documents\GitHub\Unit-Testing-Online\debug.log" --service-request-channel-token=5BA5540380C6200E9113B9F3BCD60C6F --mojo-platform-channel-handle=1756 /prefetch:2
+- 20:10:26.641 DEBUG: App::OnContextInitialized()
+- 20:10:26.641 DEBUG: Window max width/height = 1286/680
+- 20:10:26.641 DEBUG: GetBrowserWindow(): not found, hwnd = 262456
+- 20:10:26.641 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 20:10:26.641 DEBUG: BrowserWindow::CreateBrowserControl()
+- 20:10:26.641 DEBUG: StoreBrowserWindow(): hwnd = 262456
+- 20:10:26.828 DEBUG: ClientHandler::OnAfterCreated()
+- 20:10:26.828 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 20:10:26.859 DEBUG: OnLoadingStateChange: loading=1, url=
+- 20:10:27.000 DEBUG: Command line string for the renderer process: "C:\Users\hiper\Documents\GitHub\Unit-Testing-Online\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=11B5BAFBF941C0BE304D34B951F4475D --lang=en-US --lang=en-US --log-file="C:\Users\hiper\Documents\GitHub\Unit-Testing-Online\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=11B5BAFBF941C0BE304D34B951F4475D --renderer-client-id=3 --mojo-platform-channel-handle=2404 /prefetch:1
+- 20:10:27.078 DEBUG: OnBrowserCreated()
+[1113/201028.017:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 20:10:28.516 INFO: GET 200 /
+- 20:10:28.578 DEBUG: OnContextCreated()
+- 20:10:28.578 INFO: GET 200 /navbar.css
+- 20:10:28.594 INFO: GET 200 /sources/fontawesome/css/all.css
+- 20:10:28.609 INFO: GET 200 /js/jquery-3.4.1.min.js
+- 20:10:28.625 INFO: GET 200 /localstorage/localstorage.js
+- 20:10:28.641 INFO: GET 200 /js/bootstrap.bundle.min.js
+- 20:10:28.656 INFO: GET 200 /css/bootstrap.min.css
+- 20:10:28.813 INFO: GET 200 /sources/fontawesome/webfonts/fa-solid-900.woff2
+- 20:10:30.000 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51022/
+- 20:10:53.609 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51022/
+- 20:10:53.656 INFO: GET 200 /lists.html
+- 20:10:53.703 DEBUG: OnContextCreated()
+- 20:10:53.813 INFO: GET 200 /problems/list.json
+[1113/201053.936:INFO:CONSOLE(90)] "[object Object]", source: http://127.0.0.1:51022/lists.html (90)
+[1113/201053.937:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201053.938:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201053.938:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201053.939:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201053.939:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+- 20:10:53.859 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51022/lists.html
+- 20:11:03.656 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51022/lists.html
+- 20:11:03.703 INFO: GET 200 /items.html?cod=1
+- 20:11:03.750 DEBUG: OnContextCreated()
+- 20:11:03.766 INFO: GET 200 /sources/css/style.css
+- 20:11:03.844 INFO: GET 404 /problems/1/desc.json
+- 20:11:03.844 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51022/items.html?cod=1
+- 20:11:17.766 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51022/items.html?cod=1
+- 20:11:17.812 DEBUG: OnContextCreated()
+[1113/201117.923:INFO:CONSOLE(90)] "[object Object]", source: http://127.0.0.1:51022/lists.html (90)
+[1113/201117.923:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201117.924:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201117.924:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201117.924:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201117.924:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+- 20:11:17.828 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51022/lists.html
+- 20:11:20.047 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51022/lists.html
+- 20:11:20.047 INFO: GET 200 /items.html?cod=2
+- 20:11:20.078 DEBUG: OnContextCreated()
+- 20:11:20.094 INFO: GET 404 /problems/2/desc.json
+- 20:11:20.094 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51022/items.html?cod=2
+- 20:11:21.531 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51022/items.html?cod=2
+- 20:11:21.594 INFO: GET 200 /index.html
+- 20:11:21.640 DEBUG: OnContextCreated()
+- 20:11:21.781 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51022/index.html
+- 20:11:23.734 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51022/index.html
+- 20:11:23.781 DEBUG: OnContextCreated()
+[1113/201123.887:INFO:CONSOLE(90)] "[object Object]", source: http://127.0.0.1:51022/lists.html (90)
+[1113/201123.888:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201123.888:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201123.888:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201123.888:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201123.888:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+- 20:11:23.781 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51022/lists.html
+- 20:11:25.813 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51022/lists.html
+- 20:11:25.828 INFO: GET 200 /items.html?cod=3
+- 20:11:25.859 DEBUG: OnContextCreated()
+- 20:11:25.859 INFO: GET 404 /problems/3/desc.json
+- 20:11:25.875 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51022/items.html?cod=3
+- 20:11:27.156 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51022/items.html?cod=3
+- 20:11:27.203 DEBUG: OnContextCreated()
+- 20:11:27.219 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51022/index.html
+- 20:11:28.578 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51022/index.html
+- 20:11:28.609 DEBUG: OnContextCreated()
+[1113/201128.719:INFO:CONSOLE(90)] "[object Object]", source: http://127.0.0.1:51022/lists.html (90)
+[1113/201128.720:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201128.720:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201128.720:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201128.720:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201128.721:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+- 20:11:28.625 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51022/lists.html
+- 20:11:30.047 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51022/lists.html
+- 20:11:30.047 INFO: GET 200 /items.html?cod=4
+- 20:11:30.094 DEBUG: OnContextCreated()
+- 20:11:30.078 INFO: GET 200 /problems/4/desc.json
+- 20:11:30.078 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51022/items.html?cod=4
+- 20:11:32.531 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51022/items.html?cod=4
+- 20:11:32.578 DEBUG: OnContextCreated()
+- 20:11:32.578 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51022/index.html
+- 20:11:34.984 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51022/index.html
+- 20:11:34.015 DEBUG: OnContextCreated()
+[1113/201134.116:INFO:CONSOLE(90)] "[object Object]", source: http://127.0.0.1:51022/lists.html (90)
+[1113/201134.116:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201134.116:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201134.116:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201134.117:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201134.118:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+- 20:11:34.016 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51022/lists.html
+- 20:11:34.641 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51022/lists.html
+- 20:11:34.641 INFO: GET 200 /items.html?cod=5
+- 20:11:34.687 DEBUG: OnContextCreated()
+- 20:11:34.672 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51022/items.html?cod=5
+- 20:11:34.734 INFO: GET 200 /problems/5/desc.json
+- 20:11:36.250 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51022/items.html?cod=5
+- 20:11:36.281 DEBUG: OnContextCreated()
+- 20:11:36.297 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51022/index.html
+- 20:11:37.313 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51022/index.html
+- 20:11:37.344 DEBUG: OnContextCreated()
+[1113/201137.450:INFO:CONSOLE(90)] "[object Object]", source: http://127.0.0.1:51022/lists.html (90)
+[1113/201137.451:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201137.451:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201137.451:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201137.451:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201137.452:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+- 20:11:37.359 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51022/lists.html
+- 20:11:41.844 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51022/lists.html
+- 20:11:41.890 DEBUG: OnContextCreated()
+- 20:11:41.875 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51022/items.html?cod=4
+- 20:15:30.469 INFO: POST 200 /backend/execulting-code.php
+[1113/201530.583:INFO:CONSOLE(140)] "{"total": "100", "status": "accepted"}", source: http://127.0.0.1:51022/items.html?cod=4 (140)
+- 20:15:43.344 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51022/items.html?cod=4
+- 20:15:43.375 DEBUG: OnContextCreated()
+- 20:15:43.391 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51022/index.html
+- 20:16:20.906 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51022/index.html
+- 20:16:20.937 DEBUG: OnContextCreated()
+[1113/201620.056:INFO:CONSOLE(90)] "[object Object]", source: http://127.0.0.1:51022/lists.html (90)
+[1113/201620.056:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201620.056:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201620.057:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201620.057:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201620.057:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+- 20:16:20.969 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51022/lists.html
+- 20:16:35.156 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51022/lists.html
+- 20:16:35.203 DEBUG: OnContextCreated()
+- 20:16:35.203 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51022/index.html
+- 20:16:53.625 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51022/index.html
+- 20:16:53.656 DEBUG: OnContextCreated()
+[1113/201653.760:INFO:CONSOLE(90)] "[object Object]", source: http://127.0.0.1:51022/lists.html (90)
+[1113/201653.760:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201653.760:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201653.761:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201653.761:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+[1113/201653.761:INFO:CONSOLE(101)] "[object Object]", source: http://127.0.0.1:51022/lists.html (101)
+- 20:16:53.656 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51022/lists.html
+- 20:16:57.469 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51022/lists.html
+- 20:16:57.515 DEBUG: OnContextCreated()
+- 20:16:57.516 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51022/index.html
+- 20:21:25.359 DEBUG: WM_DESTROY
+- 20:21:25.375 DEBUG: RemoveBrowserWindow(): hwnd = 262456
+- 20:21:25.375 INFO: Stopping Mongoose web server
+- 20:21:25.375 DEBUG: Mongoose webserver stopped immediately
+- 20:21:25.375 DEBUG: OnBeforeClose() hwnd=919960
+- 20:21:25.375 DEBUG: RemoveBrowserWindow(): hwnd = 919960
+- 20:21:25.375 DEBUG: GetBrowserWindow(): not found, hwnd = 919960
+- 20:21:25.391 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 20:21:25.391 DEBUG: Calling CefQuitMessageLoop()
+- 20:21:25.437 DEBUG: OnBrowserDestroyed()
+- 20:21:25.609 INFO: Ended application
+- 20:21:25.609 INFO: --------------------------------------------------------
