@@ -4,9 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.1.1">
-      <title>UTO - Unit Testing Online</title>
+	<meta name="author" content="Luis Araujo">
+    <title>STO - Simple Unit Testing</title>
 <link href="sources/fontawesome/css/all.css" rel="stylesheet">
   <script src="js/jquery-3.4.1.min.js"> </script>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbars/">
@@ -44,8 +43,10 @@
     <link href="navbar.css" rel="stylesheet">
   </head>
   <body>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="index.html">UTO</a>
+ 
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html">SUT</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -86,16 +87,16 @@
 	
 	  <div id="import" class="jumbotron">
       <div class="col-sm-8 mx-auto">
-        <h1>UTO - Unit Testing Online</h1>
+        <h1>SUT - Simple Unit Testing</h1>
         <div id="wellcome">
 		<p>
-		<b>Olá, bem-vindx ao UTO!</b>
+		<b>Olá, bem-vindx ao SUT!</b>
 		</p>
 
 		
-		 <div class="alert alert-danger" role="alert"> <i class='fas fa-exclamation'></i> Verificamos que você não possui um banco de questões. Caso esteja utilizando o UTO em uma disciplina, solicite, ao seu professor, o refereido banco de dados!</div>
+		 <div class="alert alert-danger" role="alert"> <i class='fas fa-exclamation'></i> Verificamos que você não possui um banco de questões. Caso esteja utilizando o SUT em uma disciplina, solicite, ao seu professor, o refereido banco de dados!</div>
 		 </div>
-		<p>Dejesa <a href=""> obter </a> um banco de dados do <i>UTO Team?</i> </p>
+		<p>Dejesa <a target="_blank" href="https://luisaraujo.github.io/Simple-Unit-Testing/"> obter </a> um banco de dados do <i>SUT Team?</i> </p>
 		
         
 		<form id="form-importdatabase"> 
@@ -120,11 +121,12 @@
 <script>
 
 (function checkDatabase(){
-
+	
 	$.ajax({
 	  dataType: "json",
 	  url: "backend/verifydatabase.php",
 	  success: function(json){
+		
 		if(json.dirs.length ==0){
 			$("#import").show();
 			$("#list").hide();
@@ -136,7 +138,7 @@
 			
 				list = '<div class="list-container"><h4>'+ json.dirs[l] +'</h4>';
 			
-				list += '<div class="progress" style="height: 40px; width: 400px; float: left; margin-right: 10px; border: 1px solid #aaa"> <div id="list-'+json.dirs[l]+'" class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div></div>'
+				list += '<div class="progress" style="height: 40px; width: 400px; float: left; margin-right: 10px; border: 1px solid #aaa"> <div id="list-'+json.dirs[l]+'" class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div></div>'
 				
 				list += '<button style="float: left;margin-right: 10px" type="button" class="btn btn-success bt-start" value="'+ json.dirs[l] +'"><i class="fas fa-laptop" ></i> Iniciar</button>';
 				
@@ -148,7 +150,7 @@
 				getPercent(json.dirs[l]);
 			}
 			
-			
+		}
 			
 			
 			$(".bt-start").click( function(){
@@ -161,19 +163,19 @@
 			
 			$(".bt-delete").click( function(){
 				
-			});
+				if( confirm("Você perderá todo o seu progresso. Deseja continuar?") )
+					deleteDatabase( $(this).val() );
 
-		}
+			});
 	  },
 	  error:  function(json){
-		
+		console.log(json);
 	  },
 	});
 
 })();
 
 $("#form-importdatabase").submit(function(e){
-	
 	
 	e.preventDefault();	
 	var formData = new FormData(this);
@@ -254,7 +256,25 @@ function getPercent(namedb){
 	
 }
 
+function deleteDatabase(dbname){
 
+			$.ajax({
+				url: "backend/deletedatabase.php",
+				type: 'POST',
+				dataType: "json",
+				data: {database: dbname },
+					success: function(data) {
+				 		
+						clearAllItemsDatabase( data.name );
+						window.location = "index.html";
+					}, 
+					error: function(data){
+					
+						alert("Ocorreu um erro ao deletar o Banco!");
+					}
+				});
+				
+}
 </script>
 <script src="js/bootstrap.bundle.min.js"></script>
 </html>

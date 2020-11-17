@@ -4,9 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.1.1">
-    <title>Navbar Template · Bootstrap</title>
+  <meta name="author" content="Luis Araujo">
+    <title>STO - Simple Unit Testing</title>
 <link href="sources/fontawesome/css/all.css" rel="stylesheet">
   
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbars/">
@@ -51,21 +50,13 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-     
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">Home</a>
-      </li>
-      
-    </ul>
-  </div>
+ 
 </nav>
 
 
 <div class="container">
  
-  <div> Olá <span id="username"></span>, </div>
+  <!-- <div> Olá <span id="username"></span>, </div> -->
 
 
   <main id="list-exercices" role="main">
@@ -83,8 +74,6 @@ param = searchParams.get('db');
 
 if((param == "") || (param  == undefined) )
 	window.location = "index.html";
- 
-$("#username").html( getUser() );
 
 $.ajax({
 	  dataType: "json",

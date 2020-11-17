@@ -1,6 +1,15 @@
 var meuStorage = localStorage;
 
 
+
+function clearAllItemsDatabase(database){
+
+	for( key in localStorage){
+		if(key.indexOf("uto"+database) !== -1)
+			deleteItem2(key);
+	}
+}
+
 function clearAllItems(){
 
 	for( key in localStorage){
