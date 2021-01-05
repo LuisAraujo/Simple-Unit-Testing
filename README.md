@@ -1,23 +1,27 @@
-# UTO - Unit Testing Online #
+# SUT - Simple Unit Testing #
 
-Este é um sistema de correção de questões automática para algoritmos. UTO utiliza testes unitários e permite que você teste seus exercícios de maneira fácil e rápida. 
+Este é um sistema de correção de questões automática para algoritmos. SUT utiliza testes unitários e permite que você teste seus exercícios de maneira fácil e rápida. 
  
-> O objetivo da UTO é proporcionar ao professor rápida configuração de testes unitários baseado em arquivo JSON, sem necessidade banco de dados. Aos estudantes o UTO tem como objetivo fornecer um ambiente para feedback de suas atividades e listas. 
+> O objetivo da SUT é proporcionar ao professor rápida configuração de testes unitários baseado em arquivo JSON, sem necessidade banco de dados. Aos estudantes o SUT tem como objetivo fornecer um ambiente para feedback de suas atividades e listas. 
 
 **Ferramenta:**
 
-UTO foi desenvolvido como tecnologias web (Html, Javascript, Css e PHP).
+SUT foi desenvolvido como tecnologias web (Html, Javascript, Css e PHP).
+SUT utiliza o PHPDesktonp como Container
 
-**Requisitos para instalação:**
+**Passos para configuração/adapitação:**
 
-Servidor Apache.
+> Crie um arquivo json chamado list.json.
+> Para cada questão crie uma pasta como o id fornecido no list.json.
+> Dentro de cada pasta crie um arquivo chamado desc.json
+> Compate a pasta (zip)
+> Disponibilize para os alunos.
+> Os alunos devem importat o json na página inicial do programa.
 
-**Passos para instalação:**
-
-Copie o projeto para o seu servidor
-Modifique o arquivo json na pasta *problems*
+Obs: você pode ver um exemplo em www/repo_database
 
 **Padrão Json**
+
 > list.json: Fornece uma lista de problemas como nome e id (id é referente ao nome da pasta que terá o desc.json da questão.
 
 ```javascript
